@@ -1,0 +1,6 @@
+(set-option :produce-models true)
+ (set-logic ALL)
+ (declare-fun *a () Int)
+(assert (< (str.indexof *a "ggg" 0) 5)  )
+(check-sat)
+ (get-model)

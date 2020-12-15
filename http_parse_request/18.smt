@@ -1,0 +1,6 @@
+(set-option :produce-models true)
+ (set-logic ALL)
+(declare-fun *version () String)
+(assert (not (str.prefixof "HTTP/" *version )  ) )
+(check-sat)
+ (get-model)

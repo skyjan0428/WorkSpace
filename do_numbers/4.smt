@@ -1,0 +1,8 @@
+(set-option :produce-models true)
+ (set-logic ALL)
+ (declare-fun *a () Int)
+(declare-fun *b () Int)
+(assert (> *a *b)  )
+(assert (> 100 *a)  )
+(check-sat)
+ (get-model)

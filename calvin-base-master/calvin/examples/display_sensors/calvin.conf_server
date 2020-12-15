@@ -1,0 +1,10 @@
+{
+    "calvinsys": {
+        "capabilities": {
+            "io.stdout": {
+                "module": "term.StandardOut",
+                "attributes": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+(set-option :produce-models true)
+ (set-logic ALL)
+(declare-fun *a () String)
+(assert (not (> (str.len (str.++ (str.++ (str.++ "" (str.at *a 0 )) (str.at *a 1 )) (str.at *a 2 ))) 5)  ) )
+(assert (> (str.len *a) 2))
+(check-sat)
+ (get-model)

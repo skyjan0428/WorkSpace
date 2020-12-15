@@ -1,0 +1,126 @@
+{
+    "valid": true, 
+    "requirements": {
+        "delay": [
+            {
+                "kwargs": {
+                    "node_name": {
+                        "name": "testNode2"
+                    }
+                }, 
+                "type": "+", 
+                "op": "node_attr"
+            }, 
+            {
+                "kwargs": {
+                    "owner": {
+                        "personOrGroup": "me"
+                    }
+                }, 
+                "type": "+", 
+                "op": "node_attr"
+            }, 
+            {
+                "kwargs": {
+                    "adress": {
+                        "locality": "Lund"
+                    }
+                }, 
+                "type": "+", 
+                "op": "node_attr"
+            }
+        ], 
+        "src": [
+            {
+                "type": "+", 
+                "requirements": [
+                    [
+                        {
+                            "kwargs": {
+                                "node_name": {
+                                    "organization": "org.testexample", 
+                                    "name": "testNode1"
+                                }
+                            }, 
+                            "type": "+", 
+                            "op": "node_attr"
+                        }, 
+                        {
+                            "kwargs": {
+                                "node_name": {
+                                    "name": "testNode2"
+                                }
+                            }, 
+                            "type": "+", 
+                            "op": "node_attr"
+                        }
+                    ], 
+                    [
+                        {
+                            "kwargs": {
+                                "node_spec": {
+                                    "organization": "org.testexample", 
+                                    "name": "testNode1"
+                                }
+                            }, 
+                            "type": "+", 
+                            "op": "node_attr"
+                        }, 
+                        {
+                            "kwargs": {}, 
+                            "type": "-", 
+                            "op": "current"
+                        }
+                    ]
+                ], 
+                "op": "union_group"
+            }
+        ], 
+        "print": [
+            {
+                "type": "+", 
+                "requirements": [
+                    [
+                        {
+                            "kwargs": {
+                                "node_name": {
+                                    "organization": "org.testexample", 
+                                    "name": "testNode1"
+                                }
+                            }, 
+                            "type": "+", 
+                            "op": "node_attr"
+                        }, 
+                        {
+                            "kwargs": {
+                                "node_name": {
+                                    "name": "testNode2"
+                                }
+                            }, 
+                            "type": "+", 
+                            "op": "node_attr"
+                        }
+                    ], 
+                    [
+                        {
+                            "kwargs": {
+                                "node_spec": {
+                                    "organization": "org.testexample", 
+                                    "name": "testNode1"
+                                }
+                            }, 
+                            "type": "+", 
+                            "op": "node_attr"
+                        }, 
+                        {
+                            "kwargs": {}, 
+                            "type": "-", 
+                            "op": "current"
+                        }
+                    ]
+                ], 
+                "op": "union_group"
+            }
+        ]
+    }
+}

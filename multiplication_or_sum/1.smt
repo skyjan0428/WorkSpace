@@ -1,0 +1,7 @@
+(set-option :produce-models true)
+ (set-logic ALL)
+(declare-fun *num2 () Int)
+(declare-fun *num1 () Int)
+(assert (not (< (* *num1 *num2) 1000)  ) )
+(check-sat)
+ (get-model)

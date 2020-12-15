@@ -1,0 +1,6 @@
+(set-option :produce-models true)
+ (set-logic ALL)
+ (declare-fun *a () String)
+(assert (str.contains *a "abc")  )
+(check-sat)
+ (get-model)

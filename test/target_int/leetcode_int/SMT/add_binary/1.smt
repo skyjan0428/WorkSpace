@@ -1,0 +1,7 @@
+(set-option :produce-models true)
+(set-logic ALL)
+(declare-fun a () String)
+(declare-fun b () String)
+(assert (not (or (>= (- (str.len a) 1) 0) (>= (- (str.len b) 1) 0))))
+(check-sat)
+(get-model)

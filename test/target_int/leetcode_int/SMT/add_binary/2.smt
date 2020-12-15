@@ -1,0 +1,13 @@
+(set-option :produce-models true)
+(set-logic ALL)
+(declare-fun a () String)
+(declare-fun b () String)
+(assert (or (>= (- (str.len a) 1) 0) (>= (- (str.len b) 1) 0)))
+(assert (>= (- (str.len a) 1) 0))
+(assert (>= (- (str.len b) 1) 0))
+(assert (>= (+ (str.to.int (str.at a (- (str.len a) 1))) (str.to.int (str.at b (- (str.len b) 1)))) 2))
+(assert (not (or (>= (- (str.len a) 2) 0) (>= (- (str.len b) 2) 0))))
+(assert (= (+ (+ (str.to.int (str.at a (- (str.len a) 1))) (str.to.int (str.at b (- (str.len b) 1)))) 2) 1))
+(check-sat)
+(get-model)
+

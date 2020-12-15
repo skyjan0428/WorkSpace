@@ -1,0 +1,6 @@
+(set-option :produce-models true)
+ (set-logic ALL)
+(declare-fun *ip_str () String)
+(assert (= (str.len *ip_str) 0)  )
+(check-sat)
+(get-model)

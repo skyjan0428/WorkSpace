@@ -1,0 +1,6 @@
+(set-option :produce-models true)
+ (set-logic ALL)
+  (declare-fun *a () String)
+(assert (not (str.prefixof *a "abcdef" )  ) )
+(check-sat)
+ (get-model)

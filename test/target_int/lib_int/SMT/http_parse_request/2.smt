@@ -1,0 +1,11 @@
+(set-option :produce-models true)
+(set-logic ALL)
+(define-fun-rec  split ((a String) (b String) (c Int)) String
+	(ite (= c 0)
+		(ite (< (str.indexof a b c) 0) a (str.substr a 0 (str.indexof a b c)))
+    	(split (str.substr a (+ (str.indexof a b 0) 1) (str.len a)) b (- c 1))))
+
+(declare-fun version () String)
+(assert (not (= (str.len (version.split("/")[1].split("."))) 2)))
+(check-sat)
+(get-model)

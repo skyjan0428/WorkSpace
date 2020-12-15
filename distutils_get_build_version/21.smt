@@ -1,0 +1,6 @@
+(set-option :produce-models true)
+ (set-logic ALL)
+(declare-fun *version () String)
+(assert (= (str.indexof *version "MSC v." 0) (- 0 1))  )
+(check-sat)
+ (get-model)

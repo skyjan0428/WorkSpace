@@ -1,0 +1,5 @@
+(set-option :produce-models true)
+ (set-logic ALL)
+(declare-fun *version () String)
+(check-sat)
+ (get-model)
