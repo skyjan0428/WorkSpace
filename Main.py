@@ -18,14 +18,14 @@ from do_symbolic import do_symbolic
 
 
 if __name__ == '__main__':
-    target_const = 6
+    target_const = 4
 
     debug_mode = True
 
     #  test : 3, gen : 10, trans: 4, zoo:20
 
     # file_name = 'calvin/runtime/north/calvincontrol'
-    # file_name = 'DocServer_client'
+    # file_name = 'test_class'
     file_name = 'DocServer'
     # pah of the target code
 

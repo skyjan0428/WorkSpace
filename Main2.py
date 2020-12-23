@@ -17,7 +17,7 @@ from do_symbolic import do_symbolic
 
 
 if __name__ == '__main__':
-    target_const = 2
+    target_const = 3
 
     debug_mode = True
 

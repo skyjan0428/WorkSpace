@@ -66,7 +66,7 @@ class FunctionArgs(object):
         return lst
         # return copy.deepcopy(self.arg_stack)
     def to_list(self):
-        copy_stack = copy.deepcopy(self.arg_stack)
+        copy_stack = self.arg_stack
         lst = []
         while(copy_stack):
             arg = copy_stack.pop()

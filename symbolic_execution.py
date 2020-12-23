@@ -33,7 +33,10 @@ class SymbolicExecution(object):
         return self.results
 
     def symbolic_execution(self, nodes, edges, exe_bbl, ps):
+        
+
         next_states = self.execute_bbl(nodes, edges, exe_bbl, ps)
+        
         if next_states == None:
             return
         for ns in next_states:
@@ -53,11 +56,14 @@ class SymbolicExecution(object):
         ja = []
         bc = None
         nps_list = [(ps, ja, bc)]
+        # print(nodes[bbl_id].is_loop_condition)
+        
         if nodes[bbl_id].is_loop_condition:
             nps.first_bbl_in_loop = True
         # Executing the instructions in this bbl
         bbl_ins = nodes[bbl_id].get_instructions()
         for ins in bbl_ins:
+
             temp = []
             
             # There will be one or more ProgramStatus to be carried
@@ -91,6 +97,7 @@ class SymbolicExecution(object):
             
         # Generating the next_state object
         for rps in nps_list[:]:
+
             nps = rps[0]
             ja = rps[1]
             bc = rps[2]
@@ -105,6 +112,7 @@ class SymbolicExecution(object):
             # Jumping point is None, go to the un-condition edge
             if not ja:
                 un_conditional_bbl = nodes[bbl_id].next_bbl
+
                 next_state.append((nps, un_conditional_bbl))
 
             # ja is -1: go both edges & duplicate next_state
@@ -113,7 +121,7 @@ class SymbolicExecution(object):
                 if bc.true_address is None:
                     nps.path_condition.append('not( %s )' % bc.condition)
                     next_state.append((nps, bc.false_address))
-
+                    
                     bc.true_address = nodes[bbl_id].next_bbl
                     copy_nps.path_condition.append(bc.condition)
                     next_state.append((copy_nps, bc.true_address))
@@ -128,8 +136,6 @@ class SymbolicExecution(object):
                     raise Exception('BranchAddressException @ execute_bbl()')
             # 1 assigned jumping point
             elif len(ja) == 1 and ja[0] >= 0:
-
-                # print(ja[0])
                 next_state.append((nps, ja[0]))
             else:
                 raise Exception('JumpingPointException @ execute_bbl()')
@@ -151,6 +157,7 @@ class SymbolicExecution(object):
         exe_id = ps.ins_dist
         exe_input_count = ps.input_count
         # print(exe_stack)
+        # print(exe_var_value)
 
         
         # print exe_stack
@@ -314,15 +321,22 @@ class SymbolicExecution(object):
             exe_id[23] += 1
             var1 = exe_stack.pop()
             var2 = exe_stack.pop()
+            print(var1, var2)
             if contains_symbolized([var1, var2]):
-                if not contains_symbolized([var1]) and var1 < 0:
+                if not contains_symbolized([var1]) and isinstance(var1, int) and var1 < 0:
                     var1 = '(- 0 %d)' % (var1 * -1)
-                if not contains_symbolized([var2]) and var2 < 0:
+                if not contains_symbolized([var2]) and isinstance(var2, int) and var2 < 0:
                     var2 = '(- 0 %d)' % (var2 * -1)
-                exe_stack.append('(+ %s %s)' % (str(var2), str(var1)))
+                var1 = str(var1)
+                var2 = str(var2)
+                if not contains_symbolized(var1):
+                    var1 = "'" + var1 + "'"
+                if not contains_symbolized(var2):
+                    var2 = "'" + var2 + "'"
+                exe_stack.append("(+ %s %s)" % (str(var2), str(var1)))
             else:
                 exe_stack.append(var2 + var1)
-        # 24, def
+        # 24, de
         elif instruction[0] == 'BINARY_SUBTRACT':
             exe_id[24] += 1
             var1 = exe_stack.pop()
@@ -340,14 +354,20 @@ class SymbolicExecution(object):
             exe_id[25] += 1
             var1 = exe_stack.pop()
             var2 = exe_stack.pop()
+            print(exe_stack)
             if contains_symbolized([var1, var2]):
                 if isinstance(var1, int):
                     var1 = int(self.bool_str) + var1
                 exe_stack.append('%s[%s]' % (str(var2), str(var1)))
             else:
-                val = var2[var1]
-                if isinstance(val, str):
-                    val = '"' + val + '"'
+                print(var2)
+                try:
+                    val = var2[var1]
+                except:
+                    pass
+                print(val)
+                # if isinstance(val, str):
+                #     val = '"' + val + '"'
                 # if isinstance(val, str):
                 #     val = '"' + val + '"'
                 exe_stack.append(val)
@@ -746,13 +766,14 @@ class SymbolicExecution(object):
         # 87, def
         elif instruction[0] == 'POP_BLOCK':
             exe_id[87] += 1
-            try:
-                while "*BLOCK" not in exe_stack[-1] :
-                    exe_stack.pop()
-                exe_stack.pop()
-                jump_addr.append(exe_stack.pop())
-            except:
-                pass
+            pass
+            # try:
+            #     while "*BLOCK" not in exe_stack[-1] :
+            #         exe_stack.pop()
+            #     exe_stack.pop()
+            #     jump_addr.append(exe_stack.pop())
+            # except:
+            #     pass
             # wait_util_pop_block = False
         # 89, def
         elif instruction[0] == 'BUILD_CLASS':
@@ -763,7 +784,6 @@ class SymbolicExecution(object):
             # function = exe_stack.pop()
             var2 = exe_stack.pop()
             var3 = exe_stack.pop()
-            print(var1,var2,var3)
             bases = tuple(var2)
             cls = type(var3, bases, {})
             # print(cls('a','b'))
@@ -790,8 +810,9 @@ class SymbolicExecution(object):
             number = instruction[1]
             # exe_stack.pop()
             tos = exe_stack.pop()
-            
-            if contains_symbolized([tos]):
+            print(tos)
+            print('1234231')
+            if contains_symbolized([tos]) and 'split' in tos:
                 s = ''
                 lst = []
                 for n in range(number):
@@ -876,7 +897,6 @@ class SymbolicExecution(object):
         elif instruction[0] == 'LOAD_NAME':
             exe_id[101] += 1
             val = exe_global_value[exe_global[instruction[1]]]
-            print(val)
             if val is not None:
                 exe_stack.append(val)
             # in case of builtin type
@@ -926,8 +946,9 @@ class SymbolicExecution(object):
                 elif contains_symbolized([var]):
                     exe_stack.append('%s.%s' % (var, attr_name))
                 else:
-                    att = getattr(var, exe_global[instruction[1]])
-                    print(att)
+                    print(var, attr_name)
+                    att = getattr(var, attr_name)
+                    print('1234')
                     exe_stack.append(att)
             except:
                 exe_stack.append("")
@@ -1028,8 +1049,11 @@ class SymbolicExecution(object):
                     exe_stack.append('(%s %s %s)' % (op, lhs, rhs))
             else:
                 try:
+                    print(call_str)
                     exe_stack.append(eval(call_str))
-                except:
+                except Exception as e:
+                    # import traceback
+                    # traceback.print_exc() 
                     print('[WARN]: User Defined Function Is Detected: %s' % call_str)
                     exe_stack.append('(%s %s %s)' % (op, lhs, rhs))
                     # print exe_stack[-1]
@@ -1063,7 +1087,8 @@ class SymbolicExecution(object):
 
             exe_stack.append(mod)
             exe_stack.append(attr)
-            print(exe_stack)
+
+            
 
         # 110, jrel
         elif instruction[0] == 'SETUP_EXCEPT':
@@ -1073,7 +1098,8 @@ class SymbolicExecution(object):
         # 110, jrel
         elif instruction[0] == 'JUMP_FORWARD':
             exe_id[110] += 1
-
+            if instruction[1] % 2 == 1:
+                instruction[1] += 1
             jump_addr.append(instruction[1])
 
         # 111, jabs
@@ -1167,7 +1193,7 @@ class SymbolicExecution(object):
         elif instruction[0] == 'POP_JUMP_IF_TRUE':
             exe_id[115] += 1
             flag = exe_stack.pop()
-            print(flag)
+            
             if contains_symbolized(flag):
                 if ps.first_bbl_in_loop:
                     print('[INFO]: While-loop condition depends on symbolized expression %s' % str(flag))
@@ -1192,9 +1218,7 @@ class SymbolicExecution(object):
         elif instruction[0] == 'LOAD_GLOBAL':
             exe_id[116] += 1
             val = exe_global_value[exe_global[instruction[1]]]
-            print(exe_global[instruction[1]])
-            print(exe_global_value)
-            print(exe_global_value[exe_global[instruction[1]]])
+            
             if val is not None:
                 exe_stack.append(val)
             else:
@@ -1202,12 +1226,12 @@ class SymbolicExecution(object):
                     obj = eval(exe_global[instruction[1]])
                     exe_stack.append(obj)
                 except:
-                    o
                     instance = exe_var_value['self']
                     classes = instance.__class__.__mro__
                     for c in classes:
                         try:
                             # path = inspect.getfile(instance.__class__)
+                            import inspect
                             path = inspect.getfile(c)
                             from importlib.machinery import SourceFileLoader
                             foo = SourceFileLoader("module.name", path).load_module()
@@ -1230,9 +1254,9 @@ class SymbolicExecution(object):
             exe_id[124] += 1
             var_name = exe_vars[instruction[1]]
             # global_stack.append(exe_var_value[var_name])
-            
+            # print(exe_var_value)
             result = exe_var_value[var_name]
-            print(result)
+            
             exe_stack.append(result)
         elif instruction[0] == 'STORE_ATTR':
             exe_id[124] += 1
@@ -1253,6 +1277,7 @@ class SymbolicExecution(object):
                 val = exe_stack.pop()
                 # if isinstance(val, str):
                 #     val = '"'+val+'"'
+            
             exe_var_value[var_name] = val
             # print var_name, exe_var_value[var_name]
         # 120, jrel
@@ -1265,6 +1290,8 @@ class SymbolicExecution(object):
         # 131, def
         elif instruction[0] == 'CALL_METHOD':
             global is_call
+            import traceback 
+            import copy
             args = []
             fnc_call = FunctionCall()
             arg_list = FunctionArgs()
@@ -1272,15 +1299,16 @@ class SymbolicExecution(object):
                 x = exe_stack.pop()
                 args.append(x)
                 arg_list.push(x)
+
             method = exe_stack.pop()
             attr = exe_stack.pop()
+            print(args)
             if isinstance(attr, tuple):
                 a = attr[1]
             else:
                 a = attr
-            print(a)
-            print(method)
             att = getattr(a, method)
+            print(method)
             import inspect
             # path = inspect.getfile(a.__class__)
             # print(path)
@@ -1295,106 +1323,116 @@ class SymbolicExecution(object):
             # print(isinstance(att, types.BuiltinFunctionType))
             # if isinstance(att, types.BuiltinFunctionType):
             #     print(dir(att))
-            if method != 'docserver' and method != 'service_actions' and not isinstance(att, types.BuiltinFunctionType) and (contains_symbolized(args) or is_call or method == 'serve_forever' or method == '_handle_request_noblock' or method == 'RequestHandlerClass' or method == 'process_request' or method == 'finish_request' or method == 'handle' or method == 'handle_one_request' or method == 'method'):
-                # import inspect
-                # print(inspect.getsource(att))
-                # print(type(att))
-                type_obj = False
-                try:
-                    co = att.__code__
-                except:
-                    args.reverse()
-                    copy_args = args[:]
-                    c = att(*copy_args)
-                    type_obj = True
-                    co = c.__init__.__code__
-                dis.dis(co)
-                fnc_call.set_top_item(att)
-                fnc_call.set_args(arg_list)
-                var_sets = ps.parent_const.copy()
-                var_sets.update(ps.var_value)
-                if isinstance(fnc_call.top_item, str):
-                    fnc_name = fnc_call.top_item
-                else:
-                    fnc_name = fnc_call.top_item.__name__
-                # print('[WARN]: Import Function On Symbolic Variable Is Detected: %s' % fnc_call.__str__())
-                print('[WARN]: Import Function On Symbolic Variable Is Detected: %s' % fnc_name)
-
-                # co = att.__code__
-                rps = ProgramStatus([], list(co.co_names), co.co_varnames,
-                                    list(co.co_consts), ps.parent_const, co.co_argcount)
-
-                # modify the original var names to actual inputs
-                fnc_args = fnc_call.args.__copy__()
-                fnc_args.append(a)
-                fnc_args.reverse()
-                print(fnc_args)
-                for i, element in enumerate(co.co_varnames):
-                    print(co.co_varnames[i])
-                    if type_obj and i == 0:
-                        rps.adjust_var_value(co.co_varnames[i], c)
-                    elif i >= len(fnc_args):
-                        
-                        rps.adjust_var_value(co.co_varnames[i], None)
-                    else:
-                        # print(co.co_varnames[i], fnc_args[i])
-                        rps.adjust_var_value(co.co_varnames[i], fnc_args[i])
-
-                rps.set_ins_dist(ps.get_copy_ins_dist())
-                rps.set_input_count(exe_input_count)
-
-                nodes, edges = generate_cfg(co, fnc_name)
-                se = SymbolicExecution((nodes, edges), rps)
-                se.run()
-                se_results = se.get_results()
-
-                nps_list = []
-                for se_result in se_results:
+            # print(method)
+            try:
+                if  method != 'docserver' and method != 'service_actions' and not isinstance(att, types.BuiltinFunctionType) and (contains_symbolized(args)) or method == 'serve_forever' or method == '_handle_request_noblock'  or method == 'process_request' or method == 'finish_request' or method == 'handle' or method == 'handle_one_request' or method == 'method' or method == 'RequestHandlerClass' or method == '_marshaled_dispatch':
+                    
+                    # or method == 'RequestHandlerClass'
+                    # or method == 'serve_forever')
+                    # or method == '_handle_request_noblock'  or method == 'process_request' or method == 'finish_request' or method == 'handle' or method == 'handle_one_request' or method == 'method'
+                    # import inspect
+                    # print(inspect.getsource(att))
+                    # print(type(att))
+                    type_obj = False
                     try:
-                        copied_stack = copy.deepcopy(exe_stack)
-                        copied_stack.append(se_result[0])
-
-                        copied_pc = copy.deepcopy(exe_pc)
-                        copied_pc += se_result[1]
-
-                        nps = ProgramStatus(copied_stack, exe_global, exe_vars, exe_const,
-                                            ps.parent_const, ps.arg_count)
-                        nps.first_bbl_in_loop = ps.first_bbl_in_loop
-                        nps.set_global_value(exe_global_value)
-                        nps.set_var_value(exe_var_value)
-                        nps.set_path_condition(copied_pc)
-                        nps.set_ins_counter(exe_ic+se_result[2])
-                        nps.set_ins_dist(se_result[3])
-                        # [WARN]: this should be fixed quickly
-                        nps.set_input_count(exe_input_count)
-
-                        nps_list.append((nps, jump_addr, bc))
+                        co = att.__code__
                     except:
-                        pass
+                        copy_args = []
+                        for arg in args:
+                            copy_args.append('')
+                        init = att.__init__
+                        def __init__(self):
+                            pass
+                        att.__init__ = __init__
+                        c = att()
+                        type_obj = True
+                        c.__init__ = init
+                        co = c.__init__.__code__
+                    dis.dis(co)
+                    fnc_call.set_top_item(att)
+                    fnc_call.set_args(arg_list)
+                    var_sets = ps.parent_const.copy()
+                    var_sets.update(ps.var_value)
+                    if isinstance(fnc_call.top_item, str):
+                        fnc_name = fnc_call.top_item
+                    else:
+                        fnc_name = fnc_call.top_item.__name__
+                    # print('[WARN]: Import Function On Symbolic Variable Is Detected: %s' % fnc_call.__str__())
+                    print('[WARN]: Import Function On Symbolic Variable Is Detected: %s' % fnc_name)
 
-                return nps_list
-            else:
-                # print(args)
-                # print(a)
-                # args.append(a)
-                # global is_while
-                # if method == 'select' and is_while:
-                #     self.add_results((True, ps.path_condition, ps.ins_counter, ps.ins_dist, ps.global_value))
-                # else:
-                #     is_while = True
+                    # co = att.__code__
+                    rps = ProgramStatus([], list(co.co_names), co.co_varnames,
+                                        list(co.co_consts), ps.parent_const, co.co_argcount)
+
+                    # modify the original var names to actual inputs
+                    fnc_args = fnc_call.args.__copy__()
+                    fnc_args.append(a)
+                    fnc_args.reverse()
+                    for i, element in enumerate(co.co_varnames):
+                        if type_obj and i == 0:
+                            rps.adjust_var_value(co.co_varnames[i], c)
+                        elif i >= len(fnc_args):
+                            rps.adjust_var_value(co.co_varnames[i], None)
+                        else:
+                            rps.adjust_var_value(co.co_varnames[i], fnc_args[i])
+
+                    rps.set_ins_dist(ps.get_copy_ins_dist())
+                    rps.set_input_count(exe_input_count)
+
+                    nodes, edges = generate_cfg(co, fnc_name)
+                    se = SymbolicExecution((nodes, edges), rps)
+                    se.run()
+                    se_results = se.get_results()
+
+                    nps_list = []
+                    for se_result in se_results:
+                        try:
+                            copied_stack = copy.deepcopy(exe_stack)
+                            copied_stack.append(se_result[0])
+
+                            copied_pc = copy.deepcopy(exe_pc)
+                            copied_pc += se_result[1]
+
+                            nps = ProgramStatus(copied_stack, exe_global, exe_vars, exe_const,
+                                                ps.parent_const, ps.arg_count)
+                            nps.first_bbl_in_loop = ps.first_bbl_in_loop
+                            nps.set_global_value(exe_global_value)
+                            nps.set_var_value(exe_var_value)
+                            nps.set_path_condition(copied_pc)
+                            nps.set_ins_counter(exe_ic+se_result[2])
+                            nps.set_ins_dist(se_result[3])
+                            # [WARN]: this should be fixed quickly
+                            nps.set_input_count(exe_input_count)
+
+                            nps_list.append((nps, jump_addr, bc))
+                        except:
+                            pass
+
+                    return nps_list
+                else:
+                    args.reverse()
+                    # print(args)
+                    c = att(*args)
+                    
+                    exe_stack.append(c)
+            except Exception as e:
+                # traceback.print_exc() 
                 args.reverse()
                 c = att(*args)
                 exe_stack.append(c)
             # exe_stack.append()
             # print(type(method), type(attr))
-
+        elif instruction[0] == 'EXTENDED_ARG':
+            # print(exe_global[instruction[1]])
+            pass
         elif instruction[0] == 'LOAD_METHOD':
-            print(exe_global[instruction[1]])
+            # print(exe_global[instruction[1]])
             exe_stack.append(exe_global[instruction[1]])
         elif instruction[0] == 'SETUP_FINALLY':
             pass
         elif instruction[0] == 'LOAD_BUILD_CLASS':
-            exe_stack.append(exe_global[1])
+            import builtins
+            exe_stack.append(builtins.__build_class__)
         elif instruction[0] == '<0>':
             pass
         elif instruction[0] == 'CALL_FUNCTION_KW':
@@ -1430,7 +1468,6 @@ class SymbolicExecution(object):
                     try:
                         exe_stack.append(fnc_call.top_item)
                     except Exception as e:
-                        print(e)
                         exe_stack.append(instance)
                 else:
                     # try:
@@ -1468,30 +1505,39 @@ class SymbolicExecution(object):
                     b = fnc_call.top_item(*args, **n_v)
                     exe_stack.append(b)
                 except Exception as a:
-                    print(a)
                     exe_stack.append(fnc_call.__str__())
-
-
-
-        elif instruction[0] == 'CALL_FUNCTION':
+        # elif instruction[0] == 'CALL_FUNCTION_EX':
+        #     args = exe_stack.pop()
+        #     func = exe_stack.pop()
+        #     exe_stack.append(func(*args))
+        elif instruction[0] == 'CALL_FUNCTION' or instruction[0] == 'CALL_FUNCTION_EX':
             exe_id[131] += 1
             fnc_call = FunctionCall()
             arg_list = FunctionArgs()
+            args = []
             instance = 0
-            print(exe_stack)
-            high = int(instruction[1] / 256 * 2)
-            low = int(instruction[1] % 256)
-            total = high + low
-            for i in range(0, high, 2):
-                x = exe_stack.pop()
-                y = exe_stack.pop()
-                print(x, y)
-                arg_list.push([y.replace('"', ''), x])
-            for i in range(low):
-                x = exe_stack.pop()
-                arg_list.push(x)
-                print(x)
+            # high = int(instruction[1] / 256 * 2)
+            if instruction[0] == 'CALL_FUNCTION':
+                low = int(instruction[1] % 256)
+                total = low
+                # for i in range(0, high, 2):
+                #     x = exe_stack.pop()
+                #     y = exe_stack.pop()
+                    
+                    # arg_list.push([y.replace('"', ''), x])
+                for i in range(low):
+                    x = exe_stack.pop()
+                    arg_list.push(x)
+                    args.append(x)
+            else:
+                tu = exe_stack.pop()
+                for t in tu:
+                    args.append(t)
+                    arg_list.push(t)
+                
+
             fnc_call.set_args(arg_list)
+            
 
 
             inses = exe_stack.pop()
@@ -1500,16 +1546,93 @@ class SymbolicExecution(object):
             else:
                 ins = inses
 
-            # print(ins)
             # print(arg_list.to_list(), ins.__code__.co_consts)
-           
             fnc_call.set_top_item(ins)
             var_sets = ps.parent_const.copy()
             var_sets.update(ps.var_value)
             # print(type(ins))
             # print 'copy', type(arg_list)
             # for a in arg_list:
+            if  ins.__name__ == 'do_POST':
+                    
+                type_obj = False
+                att = ins
+                try:
+                    co = att.__code__
+                except:
+                    copy_args = []
+                    for arg in args:
+                        copy_args.append('')
+                    init = att.__init__
+                    def __init__(self):
+                        pass
+                    att.__init__ = __init__
+                    c = att()
+                    type_obj = True
+                    c.__init__ = init
+                    co = c.__init__.__code__
+                dis.dis(co)
 
+                fnc_call.set_top_item(att)
+                fnc_call.set_args(arg_list)
+                var_sets = ps.parent_const.copy()
+                var_sets.update(ps.var_value)
+                if isinstance(fnc_call.top_item, str):
+                    fnc_name = fnc_call.top_item
+                else:
+                    fnc_name = fnc_call.top_item.__name__
+                # print('[WARN]: Import Function On Symbolic Variable Is Detected: %s' % fnc_call.__str__())
+                print('[WARN]: Import Function On Symbolic Variable Is Detected: %s' % fnc_name)
+
+                # co = att.__code__
+                rps = ProgramStatus([], list(co.co_names), co.co_varnames,
+                                    list(co.co_consts), ps.parent_const, co.co_argcount)
+
+                # modify the original var names to actual inputs
+                fnc_args = fnc_call.args.__copy__()
+                fnc_args.append(att.__self__)
+                fnc_args.reverse()
+                for i, element in enumerate(co.co_varnames):
+                    if type_obj and i == 0:
+                        rps.adjust_var_value(co.co_varnames[i], c)
+                    elif i >= len(fnc_args):
+                        rps.adjust_var_value(co.co_varnames[i], None)
+                    else:
+                        rps.adjust_var_value(co.co_varnames[i], fnc_args[i])
+
+                rps.set_ins_dist(ps.get_copy_ins_dist())
+                rps.set_input_count(exe_input_count)
+
+                nodes, edges = generate_cfg(co, fnc_name)
+                se = SymbolicExecution((nodes, edges), rps)
+                se.run()
+                se_results = se.get_results()
+
+                nps_list = []
+                for se_result in se_results:
+                    try:
+                        copied_stack = copy.deepcopy(exe_stack)
+                        copied_stack.append(se_result[0])
+
+                        copied_pc = copy.deepcopy(exe_pc)
+                        copied_pc += se_result[1]
+
+                        nps = ProgramStatus(copied_stack, exe_global, exe_vars, exe_const,
+                                            ps.parent_const, ps.arg_count)
+                        nps.first_bbl_in_loop = ps.first_bbl_in_loop
+                        nps.set_global_value(exe_global_value)
+                        nps.set_var_value(exe_var_value)
+                        nps.set_path_condition(copied_pc)
+                        nps.set_ins_counter(exe_ic+se_result[2])
+                        nps.set_ins_dist(se_result[3])
+                        # [WARN]: this should be fixed quickly
+                        nps.set_input_count(exe_input_count)
+
+                        nps_list.append((nps, jump_addr, bc))
+                    except:
+                        pass
+
+                return nps_list
             if contains_symbolized(arg_list.__copy__() + [fnc_call.top_item]):
                 if isinstance(fnc_call.top_item, str):
                     fnc_name = fnc_call.top_item
@@ -1725,19 +1848,26 @@ class SymbolicExecution(object):
                             else:
                                 print('[WARN]: Import Function On Symbolic Variable Is Detected: %s' % fnc_call.__str__())
                                 
+                                
                                 # try:
                                 co = fnc_call.top_item.__code__
-                            
-
+                                dis.dis(co)
                                 rps = ProgramStatus([], list(co.co_names), co.co_varnames,
                                                     list(co.co_consts), ps.parent_const, co.co_argcount)
 
                                 # modify the original var names to actual inputs
-                                fnc_args = fnc_call.args.__copy__()
+                                print(args)
+                                fnc_args = args
+                                if co.co_varnames[0]=='self':
+                                    fnc_args.append(fnc_call.top_item.__self__)
                                 fnc_args.reverse()
+                                # for i, element in enumerate(co.co_varnames):
+                                #     rps.adjust_var_value(co.co_varnames[i], fnc_args[i])
                                 for i, element in enumerate(co.co_varnames):
-                                    rps.adjust_var_value(co.co_varnames[i], fnc_args[i])
-
+                                    if i >= len(fnc_args):
+                                        rps.adjust_var_value(co.co_varnames[i], None)
+                                    else:
+                                        rps.adjust_var_value(co.co_varnames[i], fnc_args[i])
                                 rps.set_ins_dist(ps.get_copy_ins_dist())
                                 rps.set_input_count(exe_input_count)
 
@@ -1745,32 +1875,34 @@ class SymbolicExecution(object):
                                 se = SymbolicExecution((nodes, edges), rps)
                                 se.run()
                                 se_results = se.get_results()
-
+                                # print(se_results)
+                                # print('se_results')
+                                exe_stack.append(se_results[0][0])
                                 nps_list = []
-                                for se_result in se_results:
-                                    try:
-                                        copied_stack = copy.deepcopy(exe_stack)
-                                        copied_stack.append(se_result[0])
+                                # for se_result in se_results:
+                                #     try:
+                                #         copied_stack = copy.deepcopy(exe_stack)
+                                #         copied_stack.append(se_result[0])
 
-                                        copied_pc = copy.deepcopy(exe_pc)
-                                        copied_pc += se_result[1]
+                                #         copied_pc = copy.deepcopy(exe_pc)
+                                #         copied_pc += se_result[1]
 
-                                        nps = ProgramStatus(copied_stack, exe_global, exe_vars, exe_const,
-                                                            ps.parent_const, ps.arg_count)
-                                        nps.first_bbl_in_loop = ps.first_bbl_in_loop
-                                        nps.set_global_value(exe_global_value)
-                                        nps.set_var_value(exe_var_value)
-                                        nps.set_path_condition(copied_pc)
-                                        nps.set_ins_counter(exe_ic+se_result[2])
-                                        nps.set_ins_dist(se_result[3])
-                                        # [WARN]: this should be fixed quickly
-                                        nps.set_input_count(exe_input_count)
+                                #         nps = ProgramStatus(copied_stack, exe_global, exe_vars, exe_const,
+                                #                             ps.parent_const, ps.arg_count)
+                                #         nps.first_bbl_in_loop = ps.first_bbl_in_loop
+                                #         nps.set_global_value(exe_global_value)
+                                #         nps.set_var_value(exe_var_value)
+                                #         nps.set_path_condition(copied_pc)
+                                #         nps.set_ins_counter(exe_ic+se_result[2])
+                                #         nps.set_ins_dist(se_result[3])
+                                #         # [WARN]: this should be fixed quickly
+                                #         nps.set_input_count(exe_input_count)
 
-                                        nps_list.append((nps, jump_addr, bc))
-                                    except:
-                                        pass
+                                #         nps_list.append((nps, jump_addr, bc))
+                                #     except:
+                                #         pass
 
-                                return nps_list
+                                # return nps_list
 
 
                                 # print(fnc_call.__str__())
@@ -1800,11 +1932,13 @@ class SymbolicExecution(object):
                             print(b)
                             exe_stack.append(b)
                         except Exception as e:
-                            print(e)
+                            # import traceback
+                            # traceback.print_exc() 
                             exe_stack.append(instance)
                     else:
                         # Add the TOS to varsets
                         try:
+                            import inspect
                             lines = inspect.getsource(fnc_call.top_item)
                             indexA = lines.index("(")
                             indexB = lines.index(")")
@@ -1821,22 +1955,43 @@ class SymbolicExecution(object):
                             ret_val = fnc_call.top_item(lines[indexA:indexB+1])
                             exe_stack.append(ret_val)
                         except Exception:
+                            # import traceback
+                            # traceback.print_exc() 
                             try:
-                                tu = (tuple)(fnc_call.get_args().to_list());
-                                ret_val = fnc_call.top_item(*tu);
-                                exe_stack.append(ret_val)
-                            except:
+                                tu = arg_list.to_tuple();
+                                if fnc_call.top_item.__name__ == '__build_class__':
+                                    import inspect
+                                    print(tu[0])
+                                    path = inspect.getfile(tu[0])
+                                    print(path)
+                                    from importlib.machinery import SourceFileLoader
+                                    foo = SourceFileLoader("module.name", path).load_module()
+                                    val = eval('foo.' + tu[1])
+                                    print(val)
+                                    exe_stack.append(val)
+                                else:
+                                    args.reverse()
+                                    tu = tuple(args)
+                                    
+                                    ret_val = fnc_call.top_item(*tu);
+                                    # if fnc_call.top_item.__name__ == 'resolve_dotted_attribute':
+                                    #     print(ret_val('title'))
+                                    exe_stack.append(ret_val)
+                            except Exception as e:
+                                # import traceback
+                                # traceback.print_exc() 
                                 exe_stack.append("")
                         
 
                 else:                 
                     try:
-                        
                         args = arg_list.to_tuple()
+
                         b = fnc_call.top_item(*args)
                         exe_stack.append(b)
                     except Exception as a:
-                        print(a)
+                        import traceback
+                        traceback.print_exc() 
                         exe_stack.append(fnc_call.__str__())
             
         elif instruction[0] == 'SETUP_WITH':
@@ -1853,7 +2008,7 @@ class SymbolicExecution(object):
             exe_stack.pop()
             code_obj = exe_stack.pop()
 
-
+            # print(type(code_obj))
             default_args = []
             for i in range(instruction[1]):
                 default_args.append(exe_stack.pop())
@@ -1862,6 +2017,7 @@ class SymbolicExecution(object):
             func = FunctionType(code_obj, {}, argdefs= tuple(default_args))
             # print(func.__code__)
             # dis.dis(func)
+
             exe_stack.append(func)
 
         # 142, def
@@ -1889,7 +2045,7 @@ def contains_symbolized(args):
         return False
     flag = 0
     for arg in args:
-        if str(arg).__contains__('*'):
+        if str(arg).__contains__('*') and not str(arg).__contains__('xml'):
             flag = 1
     return flag
 # def test4(a, b, const = 0, kk = False):

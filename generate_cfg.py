@@ -57,6 +57,7 @@ class Instruction(object):
         return " Address: " + str(self.address) + " Opcode: " + str(self.opcode) + " Mnemonic: " + str(self.mnemonic) + " Symbol_str: " + str(self.symbol_str) + " Symbol: " + str(self.symbol) + " Arg: " + str(self.arg)
     def __str__(self):
         s = '<TR><TD align="left"><FONT color="white">%-20s</FONT>' % self.mnemonic
+        
         if self.opcode >= opcode.HAVE_ARGUMENT:
             s += '<FONT color="#73ADAD">%s</FONT>' % self.arg
             # s += '<FONT color="#73ADAD">%s</FONT>' % str(self.arg).ljust(5)
@@ -137,7 +138,6 @@ def findlabels(code):
 
 def next_branch_distance(i, branches):
     diff_addr = []
-    print(i, branches)
     for abs_addr in branches:
         if abs_addr != None and abs_addr > i:
             diff_addr.append(abs_addr-i)
@@ -149,6 +149,7 @@ def next_branch_distance(i, branches):
 
 
 def generate_cfg(co, name):
+
     code = co.co_code
     branch_instruction = opcode.hasjrel + opcode.hasjabs
     
@@ -180,13 +181,15 @@ def generate_cfg(co, name):
         # indicates the edge will be removed
         cut_edge_flag = 0
         i += 1
+        if op == 0:
+            continue
         if op >= opcode.HAVE_ARGUMENT:
             # print unpack('<b', code[i : i + 1])
             # print unpack('<b', code[i+1 : i+2])
             # oparg = unpack('<H', code[i : i + 2])[0] + extended_arg
             oparg = code[i]
             extended_arg = 0
-            i += 1
+            
             if op == opcode.EXTENDED_ARG:
                 extended_arg = oparg << 16
             if op in opcode.hasconst:
@@ -203,13 +206,16 @@ def generate_cfg(co, name):
                 symbol = free[oparg]
             else:
                 symbol = oparg
-
+        i += 1
+        # print(current_instruction_addr, op, repr(symbol), symbol, oparg)
         ins = Instruction(current_instruction_addr, op, repr(symbol), symbol, oparg)
         # print ins.demo()
+        
         current_bbl.append(ins)
         # print(ins)
         # filter unreachable instructions due to RETURN_VALUE instruction
         if op == opcode.opmap['RETURN_VALUE']:
+            
             nodes[current_bbl.start_address] = current_bbl
 
             next_valid_instruction = next_branch_distance(current_instruction_addr, branch_dest)
@@ -224,9 +230,10 @@ def generate_cfg(co, name):
             exit_call_address = current_instruction_addr
             # exit_flag = is_exit_code(code, current_instruction_addr)
 
-        if exit_flag == 1 and op == opcode.opmap['CALL_FUNCTION']:
+        if exit_flag == 1 and op == opcode.opmap['CALL_FUNCTION'] or op == opcode.opmap['CALL_METHOD']:
             exit_call_distance = current_instruction_addr-exit_call_address
             if exit_call_distance == 3 or exit_call_distance == 6:
+                
                 nodes[current_bbl.start_address] = current_bbl
                 next_valid_instruction = next_branch_distance(current_instruction_addr, branch_dest)
                 if next_valid_instruction == None:
@@ -247,6 +254,7 @@ def generate_cfg(co, name):
             branch_dest.append(dst)
 
             # Push our current BBL into the nodes list
+            
             nodes[current_bbl.start_address] = current_bbl
 
             color_branch_taken_if_jmp, color_branch_if_no_jmp = 'blue', 'blue'
@@ -255,8 +263,8 @@ def generate_cfg(co, name):
                     color_branch_taken_if_jmp = 'green'
                     color_branch_if_no_jmp = 'red'
                 elif opcode.opname[op].find('JUMP_IF_TRUE') != -1:
-                    color_branch_taken_if_jmp = 'red'
-                    color_branch_if_no_jmp = 'green'
+                    color_branch_taken_if_jmp = 'green'
+                    color_branch_if_no_jmp = 'red'
 
                 # Add an edge between the current_bbl and the destination
                 if opcode.opname[op] not in ['SETUP_LOOP', 'SETUP_WITH']:
@@ -277,46 +285,48 @@ def generate_cfg(co, name):
 
             else:
                 current_bbl = BasicBlock()
-    # G = pgv.AGraph(directed = True)
-    # G.graph_attr.update({
-    #     'splines' : 'true',
-    #     'label' : 'Control Flow Graph of: %s' % repr(name)
-    # })
+   
+    G = pgv.AGraph(directed = True)
+    G.graph_attr.update({
+        'splines' : 'true',
+        'label' : 'Control Flow Graph of: %s' % repr(name)
+    })
 
-    # G.node_attr.update({
-    #     'style' : 'filled',
-    #     'shape' : 'box',
-    #     'color' : '#2D2D2D',
-    #     'fontname' : 'Consolas Bold', # monospace font ftw!
-    #     'fontsize' : 9,
-    #     'nojustify' : 'true'
-    # })
+    G.node_attr.update({
+        'style' : 'filled',
+        'shape' : 'box',
+        'color' : '#2D2D2D',
+        'fontname' : 'Consolas Bold', # monospace font ftw!
+        'fontsize' : 9,
+        'nojustify' : 'true'
+    })
 
-    # G.edge_attr.update({
-    #     'color' : 'blue',
-    #     'dir' : 'forward',
-    #     'arrowsize' : 1
-    # })
+    G.edge_attr.update({
+        'color' : 'blue',
+        'dir' : 'forward',
+        'arrowsize' : 1
+    })
 
-    # # add nodes to the graph
-    # # print(type(nodes))
-    # for bbl_id in nodes.keys():
-    #     # print(bbl_id, bbl.demo())
-    #     G.add_node(bbl_id, label='<%s>' % nodes[bbl_id])
-    # # print(current_bbl.demo())
+    # add nodes to the graph
+    # print(type(nodes))
+    for bbl_id in nodes.keys():
+        # print(bbl_id, nodes[bbl_id])
+        nodes[bbl_id].start_address = bbl_id
+        G.add_node(bbl_id, label='<%s>' % nodes[bbl_id])
+    # print(current_bbl.demo())
+    # exit()
 
+    # set edge label
+    for src, dst, color in edges:
+        # if path_conditions[src, dst]:
+        #     pc = path_conditions[src, dst]
+        # else:
+        #     pc = ['True']
+        G.add_edge(src, dst, color = color)
 
-    # # set edge label
-    # for src, dst, color in edges:
-    #     # if path_conditions[src, dst]:
-    #     #     pc = path_conditions[src, dst]
-    #     # else:
-    #     #     pc = ['True']
-    #     G.add_edge(src, dst, color = color)
+    G.layout('dot')
+    G.draw(name + '_cfg.svg', prog='dot', args='-Ln20 -LC2')
 
-    # G.layout('dot')
-    # G.draw(name + '_cfg.svg', prog='dot', args='-Ln20 -LC2')
-
-    # print('-----Control Flow Graph of %s Has Been Generated-----' % name)
+    print('-----Control Flow Graph of %s Has Been Generated-----' % name)
     
     return nodes, edges
