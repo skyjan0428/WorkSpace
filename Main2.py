@@ -37,7 +37,7 @@ if __name__ == '__main__':
     srcipt_path = os.path.join(path, file_name+'.py')
     bytecode_path = os.path.join(path, file_name+'.pyc')
 
-    res = do_symbolic(srcipt_path, bytecode_path, target_const)
+    res = do_symbolic(srcipt_path, bytecode_path, target_const, 1)
     count = 0
     if not debug_mode:
         os.mkdir('./' + file_name);
@@ -58,7 +58,12 @@ if __name__ == '__main__':
         od = collections.OrderedDict(sorted(d.items()))
         print('Instruction set %d: %s' % (count, json.dumps(od)))
         print('==========')
+    from symbolic_execution2 import write_file_stack
 
+    for write_file in write_file_stack:
+        ff = write_file[0]
+        ff.write("\\end{tabular} \\end{center} \\end{table}")
+        ff.close()
     print('[INFO]: ============= END OF THE RESULTS =============')
 
 

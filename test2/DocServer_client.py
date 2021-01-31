@@ -6,7 +6,7 @@ def main():
 	generated = sp.welcome_html('*title')
 	if 'script' in generated:
 		return 'Error'
-	
+main()
 
 
 # register_function()

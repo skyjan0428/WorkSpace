@@ -62,6 +62,7 @@ class SymbolicExecution(object):
         bc = None
         nps_list = [(ps, ja, bc)]
         # print(nodes[bbl_id].is_loop_condition)
+        
         if nodes[bbl_id].is_loop_condition:
             nps.first_bbl_in_loop = True
         # Executing the instructions in this bbl
@@ -165,9 +166,9 @@ class SymbolicExecution(object):
         exe_input_count = ps.input_count
 
         if len(write_file_stack) == 0:
-            write_file = open("%s.txt" % 'Main', "w")
+            write_file = open("%s.txt" % 'Client_Main', "w")
             file_name = "main"
-            write_file.write("\\begin{table} \\begin{center} \\caption{Results of Stack(%s)} \\label{tab:Results of Stack} \\begin{tabular}{m{4cm}| m{12cm} |} \\hline " % file_name)
+            write_file.write("\\begin{table} \\begin{center} \\caption{Results of Stack(%s)} \\label{tab:Results of Stack(Client)} \\begin{tabular}{m{4cm}| m{12cm} |} \\hline " % file_name)
             nums = 0
         else:
             # print(write_file_stack)
@@ -367,25 +368,20 @@ class SymbolicExecution(object):
         # 23, def
         elif instruction[0] == 'BINARY_ADD':
             exe_id[23] += 1
-            v1 = exe_stack.pop()
-            v2 = exe_stack.pop()
-            var1 = v1
-            var2 = v2
-            if contains_symbolized([v1, v2]):
-                if not contains_symbolized([v1]) and isinstance(v1, int) and v1 < 0:
-                    var1 = '(- 0 %d)' % (v1 * -1)
-                if not contains_symbolized([v2]) and isinstance(v2, int) and v2 < 0:
-                    var2 = '(- 0 %d)' % (v2 * -1)
-                if isinstance(v1, int) or isinstance(v2, int):
-                    exe_stack.append("(+ %s %s)" % (str(var2), str(var1)))
-                else:
-                    var1 = str(var1)
-                    var2 = str(var2)
-                    if not contains_symbolized(var1):
-                        var1 = "'" + var1 + "'"
-                    if not contains_symbolized(var2):
-                        var2 = "'" + var2 + "'"
-                    exe_stack.append("(str.++ %s %s)" % (str(var2), str(var1)))
+            var1 = exe_stack.pop()
+            var2 = exe_stack.pop()
+            if contains_symbolized([var1, var2]):
+                if not contains_symbolized([var1]) and isinstance(var1, int) and var1 < 0:
+                    var1 = '(- 0 %d)' % (var1 * -1)
+                if not contains_symbolized([var2]) and isinstance(var2, int) and var2 < 0:
+                    var2 = '(- 0 %d)' % (var2 * -1)
+                var1 = str(var1)
+                var2 = str(var2)
+                if not contains_symbolized(var1):
+                    var1 = "'" + var1 + "'"
+                if not contains_symbolized(var2):
+                    var2 = "'" + var2 + "'"
+                exe_stack.append("(str.++ %s %s)" % (str(var2), str(var1)))
             else:
                 exe_stack.append(var2 + var1)
         # 24, de
@@ -796,8 +792,11 @@ class SymbolicExecution(object):
         # 83, def
         elif instruction[0] == 'RETURN_VALUE':
             exe_id[83] += 1
+            # print('[INFO]: Return statement is detected, TOS is: %s; PC is: %s' % (
+            # str(exe_stack[-1]), ps.path_condition))
+            # print("ins_dist",  ps.global_value) 
             self.add_results((exe_stack[-1], ps.path_condition, ps.ins_counter, ps.ins_dist, ps.global_value))
-            
+            # write_file_stack.pop()[0].close()
         # 85, def
         elif instruction[0] == 'EXEC_STMT':
             exe_id[85] += 1
@@ -812,6 +811,15 @@ class SymbolicExecution(object):
         elif instruction[0] == 'POP_BLOCK':
             exe_id[87] += 1
             pass
+            # try:
+            #     while "*BLOCK" not in exe_stack[-1] :
+            #         exe_stack.pop()
+            #     exe_stack.pop()
+            #     jump_addr.append(exe_stack.pop())
+            # except:
+            #     pass
+            # wait_util_pop_block = False
+        # 89, def
         elif instruction[0] == 'BUILD_CLASS':
             exe_id[89] += 1
             # print exe_stack
@@ -874,14 +882,13 @@ class SymbolicExecution(object):
             exe_id[93] += 1
             try:
                 iterator = exe_stack.pop()
-                print(iterator)
                 if contains_symbolized([iterator]):
                     print('[INFO]: For-loop iterator depends on symbolized expression %s' % str(iterator))
-                    
-                    # bool_str = input('Please input designated iterable (eg. range(3)) or designated iteration: ')
-                    self.bool_str = '3'
+                    # bool_str = raw_input('Please input designated iterable (eg. range(3)) or designated iteration: ')
+                    # self.bool_str = '3'
                     try:
                         iterable = eval(str(self.bool_str))
+
                         if isinstance(iterable, int):
                             stripped_iterable = iterator[5:-1]
                             if contains_symbolized([stripped_iterable]):
@@ -891,13 +898,12 @@ class SymbolicExecution(object):
                                     start_index = range_index + 6
                                     it = it[start_index: -2]
                                     args = it.split(",")
-                                    iterator = iter([i for i in range(iterable)])
-                                    # if len(args) == 1:
-                                    #     iterator = iter([i for i in range(iterable)])
-                                    # elif len(args) == 2:
-                                    #     pass
-                                    # elif len(args) == 3:
-                                    #     pass
+                                    if len(args) == 1:
+                                        iterator = iter([i for i in range(iterable)])
+                                    elif len(args) == 2:
+                                        pass
+                                    elif len(args) == 3:
+                                        pass
                                 else:
                                     iterator = iter(['(str.at %s %d )' % (stripped_iterable, i) for i in range(iterable)])
                             else:
@@ -908,16 +914,15 @@ class SymbolicExecution(object):
                         print('[ERROR]: Designated iterable %s is illegal' % bool_str)
                         raise Exception('IllegalDesignatedIterableException')
 
-            except Exception as e:
-                print(e)
+            except:
+                pass
 
             try:
-                next_val = iterator.__next__()
+                next_val = iterator.next()
                 exe_stack.append(iterator)
                 exe_stack.append(next_val)
-            except Exception as e:
-                print(e)
-                jump_addr.append(exe_stack.pop()+1)
+            except:
+                jump_addr.append(instruction[1])
         # 97, name
         elif instruction[0] == 'STORE_GLOBAL':
             exe_id[97] += 1
@@ -1073,9 +1078,9 @@ class SymbolicExecution(object):
                     if op == '==':
                         op = '='
                     if not contains_symbolized([rhs]) and isinstance(rhs, str):
-                            rhs = '\"' + str(rhs) + '\"'
+                            rhs = '\"' + rhs + '\"'
                     if not contains_symbolized([lhs]) and isinstance(rhs, str):
-                        lhs = '\"' + str(lhs) + '\"'
+                        lhs = '\"' + lhs + '\"'
                     if not contains_symbolized([rhs]) and isinstance(rhs, int) and rhs < 0:
                             rhs = '(- 0 %d)' % (rhs * -1)
                     if not contains_symbolized([lhs]) and isinstance(lhs, int) and lhs < 0:
@@ -1142,7 +1147,7 @@ class SymbolicExecution(object):
             if contains_symbolized(flag):
                 if ps.first_bbl_in_loop:
                     print('[INFO]: While-loop condition depends on symbolized expression %s' % str(flag))
-                    bool_str = input('Please input designated boolean value (eg. True): ')
+                    bool_str = raw_input('Please input designated boolean value (eg. True): ')
                     try:
                         bool = eval(str(bool_str))
                     except [NameError, TypeError]:
@@ -1314,10 +1319,8 @@ class SymbolicExecution(object):
         # 120, jrel
         elif instruction[0] == 'SETUP_LOOP':
             exe_id[120] += 1
-            pass
-            # exe_stack.append(instruction[1])
-            # exe_stack.append("*BLOCK")
             exe_stack.append(instruction[1])
+            exe_stack.append("*BLOCK")
 
             # print(instruction[1])
         # 131, def
@@ -1586,11 +1589,7 @@ class SymbolicExecution(object):
 
             inses = exe_stack.pop()
             if isinstance(inses, tuple):
-                try:
-                    print(ins)
-                    ins = inses[1]
-                except:
-                    ins = inses[0]
+                ins = inses[1]
             else:
                 ins = inses
             # print(arg_list.to_list(), ins.__code__.co_consts)
@@ -1600,7 +1599,7 @@ class SymbolicExecution(object):
             # print(type(ins))
             # print 'copy', type(arg_list)
             # for a in arg_list:
-            if  not isinstance(ins, str) and ins.__name__ == 'do_POST':
+            if  ins.__name__ == 'do_POST':
                     
                 type_obj = False
                 att = ins
@@ -1867,7 +1866,7 @@ class SymbolicExecution(object):
                             exe_stack.append(fnc_call.__str__())
                     else:
                         try:
-                            val = getattr(f, fnc_call.args[0])
+                            val = getattr(f, fnc_call.args.to_list()[0])
                             # val = eval(f + "(\""+ fnc_call.args.to_list()[0]+"\")")
                             exe_stack.append(val)
                         except:

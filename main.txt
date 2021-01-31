@@ -1,0 +1,804 @@
+\begin{table} \begin{center} \caption{Results of Stack(main)} \label{tab:Results of Stack} \begin{tabular}{m{4cm}| m{12cm} |} \hline LOAD\_CONST 0 & [] \\ \hline LOAD\_CONST 1 & [0] \\ \hline IMPORT\_NAME 0 & [0, ('print\_function',)] \\ \hline IMPORT\_FROM 1 & [<module '\_\_future\_\_' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/\_\_future\_\_.py'>] \\ \hline STORE\_NAME 1 & [<module '\_\_future\_\_' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/\_\_future\_\_.py'>, \_Feature((2, 6, 0, 'alpha', 2), (3, 0, 0, 'alpha', 0), 65536)] \\ \hline POP\_TOP None & [<module '\_\_future\_\_' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/\_\_future\_\_.py'>] \\ \hline LOAD\_CONST 0 & [] \\ \hline LOAD\_CONST 2 & [0] \\ \hline IMPORT\_NAME 2 & [0, None] \\ \hline STORE\_NAME 2 & [<module 'argparse' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/argparse.py'>] \\ \hline LOAD\_CONST 0 & [] \\ \hline LOAD\_CONST 2 & [0] \\ \hline IMPORT\_NAME 3 & [0, None] \\ \hline STORE\_NAME 3 & [<module 'torch' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/\_\_init\_\_.py'>] \\ \hline LOAD\_CONST 0 & [] \\ \hline LOAD\_CONST 2 & [0] \\ \hline \end{tabular} \end{center} \end{table} \\\begin{table} \begin{center} \caption{Results of Stack(main)} \label{tab:Results of Stack} \begin{tabular}{m{4cm}| m{12cm} |} \hline IMPORT\_NAME 4 & [0, None] \\ \hline IMPORT\_FROM 5 & [<module 'torch' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/\_\_init\_\_.py'>] \\ \hline STORE\_NAME 5 & [<module 'torch' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/\_\_init\_\_.py'>, <module 'torch.nn' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/\_\_init\_\_.py'>] \\ \hline POP\_TOP None & [<module 'torch' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/\_\_init\_\_.py'>] \\ \hline LOAD\_CONST 0 & [] \\ \hline LOAD\_CONST 2 & [0] \\ \hline IMPORT\_NAME 6 & [0, None] \\ \hline IMPORT\_FROM 5 & [<module 'torch' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/\_\_init\_\_.py'>] \\ \hline ROT\_TWO None & [<module 'torch' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/\_\_init\_\_.py'>, <module 'torch.nn' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/\_\_init\_\_.py'>] \\ \hline POP\_TOP None & [<module 'torch.nn' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/\_\_init\_\_.py'>, <module 'torch' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/\_\_init\_\_.py'>] \\ \hline IMPORT\_FROM 7 & [<module 'torch.nn' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/\_\_init\_\_.py'>] \\ \hline STORE\_NAME 8 & [<module 'torch.nn' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/\_\_init\_\_.py'>, <module 'torch.nn.functional' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/functional.py'>] \\ \hline POP\_TOP None & [<module 'torch.nn' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/\_\_init\_\_.py'>] \\ \hline LOAD\_CONST 0 & [] \\ \hline LOAD\_CONST 2 & [0] \\ \hline IMPORT\_NAME 9 & [0, None] \\ \hline \end{tabular} \end{center} \end{table} \\\begin{table} \begin{center} \caption{Results of Stack(main)} \label{tab:Results of Stack} \begin{tabular}{m{4cm}| m{12cm} |} \hline IMPORT\_FROM 10 & [<module 'torch' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/\_\_init\_\_.py'>] \\ \hline STORE\_NAME 10 & [<module 'torch' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/\_\_init\_\_.py'>, <module 'torch.optim' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/optim/\_\_init\_\_.py'>] \\ \hline POP\_TOP None & [<module 'torch' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/\_\_init\_\_.py'>] \\ \hline LOAD\_CONST 0 & [] \\ \hline LOAD\_CONST 3 & [0] \\ \hline IMPORT\_NAME 11 & [0, ('datasets', 'transforms')] \\ \hline IMPORT\_FROM 12 & [<module 'torchvision' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torchvision/\_\_init\_\_.py'>] \\ \hline STORE\_NAME 12 & [<module 'torchvision' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torchvision/\_\_init\_\_.py'>, <module 'torchvision.datasets' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torchvision/datasets/\_\_init\_\_.py'>] \\ \hline IMPORT\_FROM 13 & [<module 'torchvision' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torchvision/\_\_init\_\_.py'>] \\ \hline STORE\_NAME 13 & [<module 'torchvision' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torchvision/\_\_init\_\_.py'>, <module 'torchvision.transforms' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torchvision/transforms/\_\_init\_\_.py'>] \\ \hline POP\_TOP None & [<module 'torchvision' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torchvision/\_\_init\_\_.py'>] \\ \hline LOAD\_CONST 0 & [] \\ \hline LOAD\_CONST 4 & [0] \\ \hline IMPORT\_NAME 14 & [0, ('StepLR',)] \\ \hline IMPORT\_FROM 15 & [<module 'torch.optim.lr\_scheduler' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/optim/lr\_scheduler.py'>] \\ \hline STORE\_NAME 15 & [<module 'torch.optim.lr\_scheduler' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/optim/lr\_scheduler.py'>, <class 'torch.optim.lr\_scheduler.StepLR'>] \\ \hline \end{tabular} \end{center} \end{table} \\\begin{table} \begin{center} \caption{Results of Stack(main)} \label{tab:Results of Stack} \begin{tabular}{m{4cm}| m{12cm} |} \hline POP\_TOP None & [<module 'torch.optim.lr\_scheduler' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/optim/lr\_scheduler.py'>] \\ \hline LOAD\_BUILD\_CLASS None & [] \\ \hline LOAD\_CONST 5 & [<built-in function \_\_build\_class\_\_>] \\ \hline LOAD\_CONST 6 & [<built-in function \_\_build\_class\_\_>, <code object Net at 0x101ed00c0, file "./test2/pytorch.py", line 11>] \\ \hline MAKE\_FUNCTION 0 & [<built-in function \_\_build\_class\_\_>, <code object Net at 0x101ed00c0, file "./test2/pytorch.py", line 11>, 'Net'] \\ \hline LOAD\_CONST 6 & [<built-in function \_\_build\_class\_\_>, <function Net at 0x101ec9950>] \\ \hline LOAD\_NAME 5 & [<built-in function \_\_build\_class\_\_>, <function Net at 0x101ec9950>, 'Net'] \\ \hline LOAD\_ATTR 16 & [<built-in function \_\_build\_class\_\_>, <function Net at 0x101ec9950>, 'Net', <module 'torch.nn' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/nn/\_\_init\_\_.py'>] \\ \hline CALL\_FUNCTION 3 & [<built-in function \_\_build\_class\_\_>, <function Net at 0x101ec9950>, 'Net', <class 'torch.nn.modules.module.Module'>] \\ \hline STORE\_NAME 17 & [<class 'module.name.Net'>] \\ \hline LOAD\_CONST 7 & [] \\ \hline LOAD\_CONST 8 & [<code object train at 0x101ebe8a0, file "./test2/pytorch.py", line 37>] \\ \hline MAKE\_FUNCTION 0 & [<code object train at 0x101ebe8a0, file "./test2/pytorch.py", line 37>, 'train'] \\ \hline STORE\_NAME 18 & [<function train at 0x10ef37730>] \\ \hline LOAD\_CONST 9 & [] \\ \hline LOAD\_CONST 10 & [<code object test at 0x101ed0300, file "./test2/pytorch.py", line 53>] \\ \hline \end{tabular} \end{center} \end{table} \\\begin{table} \begin{center} \caption{Results of Stack(main)} \label{tab:Results of Stack} \begin{tabular}{m{4cm}| m{12cm} |} \hline MAKE\_FUNCTION 0 & [<code object test at 0x101ed0300, file "./test2/pytorch.py", line 53>, 'test'] \\ \hline STORE\_NAME 19 & [<function test at 0x101ec9950>] \\ \hline LOAD\_CONST 11 & [] \\ \hline LOAD\_CONST 12 & [<code object main at 0x101ed0390, file "./test2/pytorch.py", line 72>] \\ \hline MAKE\_FUNCTION 0 & [<code object main at 0x101ed0390, file "./test2/pytorch.py", line 72>, 'main'] \\ \hline STORE\_NAME 20 & [<function main at 0x10ef37a60>] \\ \hline LOAD\_CONST 2 & [] \\ \hline RETURN\_VALUE None & [None] \\ \hline LOAD\_GLOBAL 0 & [] \\ \hline LOAD\_METHOD 1 & [<module 'torch' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/\_\_init\_\_.py'>] \\ \hline LOAD\_CONST 1 & [<module 'torch' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/\_\_init\_\_.py'>, 'device'] \\ \hline CALL\_METHOD 1 & [<module 'torch' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/\_\_init\_\_.py'>, 'device', 'cpu'] \\ \hline STORE\_FAST 2 & [device(type='cpu')] \\ \hline LOAD\_CONST 2 & [] \\ \hline LOAD\_CONST 3 & ['batch\_size'] \\ \hline BUILD\_MAP 1 & ['batch\_size', 32] \\ \hline \end{tabular} \end{center} \end{table} \\\begin{table} \begin{center} \caption{Results of Stack(main)} \label{tab:Results of Stack} \begin{tabular}{m{4cm}| m{12cm} |} \hline STORE\_FAST 3 & ['batch\_size', 32, {}] \\ \hline LOAD\_CONST 2 & ['batch\_size', 32] \\ \hline LOAD\_CONST 3 & ['batch\_size', 32, 'batch\_size'] \\ \hline BUILD\_MAP 1 & ['batch\_size', 32, 'batch\_size', 32] \\ \hline STORE\_FAST 4 & ['batch\_size', 32, 'batch\_size', 32, {}] \\ \hline LOAD\_GLOBAL 2 & ['batch\_size', 32, 'batch\_size', 32] \\ \hline LOAD\_METHOD 3 & ['batch\_size', 32, 'batch\_size', 32, <module 'torchvision.transforms' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torchvision/transforms/\_\_init\_\_.py'>] \\ \hline LOAD\_GLOBAL 2 & ['batch\_size', 32, 'batch\_size', 32, <module 'torchvision.transforms' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torchvision/transforms/\_\_init\_\_.py'>, 'Compose'] \\ \hline LOAD\_METHOD 4 & ['batch\_size', 32, 'batch\_size', 32, <module 'torchvision.transforms' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torchvision/transforms/\_\_init\_\_.py'>, 'Compose', <module 'torchvision.transforms' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torchvision/transforms/\_\_init\_\_.py'>] \\ \hline CALL\_METHOD 0 & ['batch\_size', 32, 'batch\_size', 32, <module 'torchvision.transforms' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torchvision/transforms/\_\_init\_\_.py'>, 'Compose', <module 'torchvision.transforms' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torchvision/transforms/\_\_init\_\_.py'>, 'ToTensor'] \\ \hline LOAD\_GLOBAL 2 & ['batch\_size', 32, 'batch\_size', 32, <module 'torchvision.transforms' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torchvision/transforms/\_\_init\_\_.py'>, 'Compose', ToTensor()] \\ \hline LOAD\_METHOD 5 & ['batch\_size', 32, 'batch\_size', 32, <module 'torchvision.transforms' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torchvision/transforms/\_\_init\_\_.py'>, 'Compose', ToTensor(), <module 'torchvision.transforms' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torchvision/transforms/\_\_init\_\_.py'>] \\ \hline LOAD\_CONST 4 & ['batch\_size', 32, 'batch\_size', 32, <module 'torchvision.transforms' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torchvision/transforms/\_\_init\_\_.py'>, 'Compose', ToTensor(), <module 'torchvision.transforms' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torchvision/transforms/\_\_init\_\_.py'>, 'Normalize'] \\ \hline LOAD\_CONST 5 & ['batch\_size', 32, 'batch\_size', 32, <module 'torchvision.transforms' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torchvision/transforms/\_\_init\_\_.py'>, 'Compose', ToTensor(), <module 'torchvision.transforms' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torchvision/transforms/\_\_init\_\_.py'>, 'Normalize', (0.1307,)] \\ \hline CALL\_METHOD 2 & ['batch\_size', 32, 'batch\_size', 32, <module 'torchvision.transforms' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torchvision/transforms/\_\_init\_\_.py'>, 'Compose', ToTensor(), <module 'torchvision.transforms' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torchvision/transforms/\_\_init\_\_.py'>, 'Normalize', (0.1307,), (0.3081,)] \\ \hline BUILD\_LIST 2 & ['batch\_size', 32, 'batch\_size', 32, <module 'torchvision.transforms' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torchvision/transforms/\_\_init\_\_.py'>, 'Compose', ToTensor(), Normalize(mean=(0.1307,), std=(0.3081,))] \\ \hline \end{tabular} \end{center} \end{table} \\\begin{table} \begin{center} \caption{Results of Stack(main)} \label{tab:Results of Stack} \begin{tabular}{m{4cm}| m{12cm} |} \hline CALL\_METHOD 1 & ['batch\_size', 32, 'batch\_size', 32, <module 'torchvision.transforms' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torchvision/transforms/\_\_init\_\_.py'>, 'Compose', [ToTensor(), Normalize(mean=(0.1307,), std=(0.3081,))]] \\ \hline STORE\_FAST 5 & ['batch\_size', 32, 'batch\_size', 32, Compose(
+    ToTensor()
+    Normalize(mean=(0.1307,), std=(0.3081,))
+)] \\ \hline LOAD\_GLOBAL 0 & ['batch\_size', 32, 'batch\_size', 32] \\ \hline LOAD\_ATTR 6 & ['batch\_size', 32, 'batch\_size', 32, <module 'torch' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/\_\_init\_\_.py'>] \\ \hline LOAD\_ATTR 7 & ['batch\_size', 32, 'batch\_size', 32, <module 'torch.utils' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/utils/\_\_init\_\_.py'>] \\ \hline LOAD\_ATTR 8 & ['batch\_size', 32, 'batch\_size', 32, <module 'torch.utils.data' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/utils/data/\_\_init\_\_.py'>] \\ \hline LOAD\_FAST 0 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>] \\ \hline BUILD\_TUPLE 1 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, '*dataset1'] \\ \hline LOAD\_FAST 3 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, ('*dataset1',)] \\ \hline CALL\_FUNCTION\_EX 1 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, ('*dataset1',), {}] \\ \hline STORE\_FAST 6 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, '*dataset1()'] \\ \hline LOAD\_GLOBAL 0 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>] \\ \hline LOAD\_ATTR 6 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <module 'torch' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/\_\_init\_\_.py'>] \\ \hline LOAD\_ATTR 7 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <module 'torch.utils' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/utils/\_\_init\_\_.py'>] \\ \hline LOAD\_ATTR 8 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <module 'torch.utils.data' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/utils/data/\_\_init\_\_.py'>] \\ \hline LOAD\_FAST 1 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>] \\ \hline \end{tabular} \end{center} \end{table} \\\begin{table} \begin{center} \caption{Results of Stack(main)} \label{tab:Results of Stack} \begin{tabular}{m{4cm}| m{12cm} |} \hline BUILD\_TUPLE 1 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, '*dataset2'] \\ \hline LOAD\_FAST 4 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, ('*dataset2',)] \\ \hline CALL\_FUNCTION\_EX 1 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, ('*dataset2',), {}] \\ \hline STORE\_FAST 7 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, '*dataset2()'] \\ \hline LOAD\_GLOBAL 9 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>] \\ \hline CALL\_FUNCTION 0 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'module.name.Net'>] \\ \hline LOAD\_METHOD 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+)] \\ \hline LOAD\_FAST 2 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), 'to'] \\ \hline CALL\_METHOD 1 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), 'to', device(type='cpu')] \\ \hline STORE\_FAST 8 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+)] \\ \hline LOAD\_GLOBAL 11 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>] \\ \hline LOAD\_ATTR 12 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, <module 'torch.optim' from '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/torch/optim/\_\_init\_\_.py'>] \\ \hline LOAD\_FAST 8 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.optim.adadelta.Adadelta'>] \\ \hline LOAD\_METHOD 13 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.optim.adadelta.Adadelta'>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+)] \\ \hline CALL\_METHOD 0 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.optim.adadelta.Adadelta'>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), 'parameters'] \\ \hline LOAD\_CONST 6 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.optim.adadelta.Adadelta'>, <generator object Module.parameters at 0x1021db1b0>] \\ \hline \end{tabular} \end{center} \end{table} \\\begin{table} \begin{center} \caption{Results of Stack(main)} \label{tab:Results of Stack} \begin{tabular}{m{4cm}| m{12cm} |} \hline LOAD\_CONST 7 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.optim.adadelta.Adadelta'>, <generator object Module.parameters at 0x1021db1b0>, 0.03] \\ \hline CALL\_FUNCTION\_KW 2 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.optim.adadelta.Adadelta'>, <generator object Module.parameters at 0x1021db1b0>, 0.03, ('lr',)] \\ \hline STORE\_FAST 9 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+)] \\ \hline SETUP\_LOOP 151 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>] \\ \hline LOAD\_GLOBAL 14 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151] \\ \hline LOAD\_CONST 8 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <class 'range'>] \\ \hline CALL\_FUNCTION 1 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <class 'range'>, 16] \\ \hline GET\_ITER None & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, range(0, 16)] \\ \hline FOR\_ITER 149 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline STORE\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 0] \\ \hline LOAD\_GLOBAL 15 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline LOAD\_FAST 8 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>] \\ \hline LOAD\_FAST 2 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+)] \\ \hline LOAD\_FAST 6 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu')] \\ \hline LOAD\_FAST 9 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()'] \\ \hline LOAD\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+)] \\ \hline \end{tabular} \end{center} \end{table} \\\begin{table} \begin{center} \caption{Results of Stack(main)} \label{tab:Results of Stack} \begin{tabular}{m{4cm}| m{12cm} |} \hline CALL\_FUNCTION 5 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+), 0] \\ \hline POP\_TOP None & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 'train(Net(\n  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))\n  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))\n  (dropout1): Dropout(p=0.25)\n  (dropout2): Dropout(p=0.5)\n  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)\n  (fc2): Linear(in\_features=128, out\_features=10, bias=True)\n), cpu, *dataset1(), Adadelta (\nParameter Group 0\n    eps: 1e-06\n    lr: 0.03\n    rho: 0.9\n    weight\_decay: 0\n), 0)'] \\ \hline JUMP\_ABSOLUTE 128 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline FOR\_ITER 149 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline STORE\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 1] \\ \hline LOAD\_GLOBAL 15 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline LOAD\_FAST 8 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>] \\ \hline LOAD\_FAST 2 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+)] \\ \hline LOAD\_FAST 6 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu')] \\ \hline LOAD\_FAST 9 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()'] \\ \hline LOAD\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+)] \\ \hline CALL\_FUNCTION 5 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+), 1] \\ \hline POP\_TOP None & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 'train(Net(\n  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))\n  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))\n  (dropout1): Dropout(p=0.25)\n  (dropout2): Dropout(p=0.5)\n  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)\n  (fc2): Linear(in\_features=128, out\_features=10, bias=True)\n), cpu, *dataset1(), Adadelta (\nParameter Group 0\n    eps: 1e-06\n    lr: 0.03\n    rho: 0.9\n    weight\_decay: 0\n), 1)'] \\ \hline JUMP\_ABSOLUTE 128 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline FOR\_ITER 149 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline STORE\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 2] \\ \hline \end{tabular} \end{center} \end{table} \\\begin{table} \begin{center} \caption{Results of Stack(main)} \label{tab:Results of Stack} \begin{tabular}{m{4cm}| m{12cm} |} \hline LOAD\_GLOBAL 15 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline LOAD\_FAST 8 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>] \\ \hline LOAD\_FAST 2 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+)] \\ \hline LOAD\_FAST 6 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu')] \\ \hline LOAD\_FAST 9 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()'] \\ \hline LOAD\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+)] \\ \hline CALL\_FUNCTION 5 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+), 2] \\ \hline POP\_TOP None & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 'train(Net(\n  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))\n  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))\n  (dropout1): Dropout(p=0.25)\n  (dropout2): Dropout(p=0.5)\n  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)\n  (fc2): Linear(in\_features=128, out\_features=10, bias=True)\n), cpu, *dataset1(), Adadelta (\nParameter Group 0\n    eps: 1e-06\n    lr: 0.03\n    rho: 0.9\n    weight\_decay: 0\n), 2)'] \\ \hline JUMP\_ABSOLUTE 128 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline FOR\_ITER 149 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline STORE\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 3] \\ \hline LOAD\_GLOBAL 15 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline LOAD\_FAST 8 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>] \\ \hline LOAD\_FAST 2 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+)] \\ \hline LOAD\_FAST 6 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu')] \\ \hline LOAD\_FAST 9 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()'] \\ \hline \end{tabular} \end{center} \end{table} \\\begin{table} \begin{center} \caption{Results of Stack(main)} \label{tab:Results of Stack} \begin{tabular}{m{4cm}| m{12cm} |} \hline LOAD\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+)] \\ \hline CALL\_FUNCTION 5 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+), 3] \\ \hline POP\_TOP None & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 'train(Net(\n  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))\n  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))\n  (dropout1): Dropout(p=0.25)\n  (dropout2): Dropout(p=0.5)\n  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)\n  (fc2): Linear(in\_features=128, out\_features=10, bias=True)\n), cpu, *dataset1(), Adadelta (\nParameter Group 0\n    eps: 1e-06\n    lr: 0.03\n    rho: 0.9\n    weight\_decay: 0\n), 3)'] \\ \hline JUMP\_ABSOLUTE 128 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline FOR\_ITER 149 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline STORE\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 4] \\ \hline LOAD\_GLOBAL 15 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline LOAD\_FAST 8 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>] \\ \hline LOAD\_FAST 2 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+)] \\ \hline LOAD\_FAST 6 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu')] \\ \hline LOAD\_FAST 9 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()'] \\ \hline LOAD\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+)] \\ \hline CALL\_FUNCTION 5 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+), 4] \\ \hline POP\_TOP None & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 'train(Net(\n  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))\n  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))\n  (dropout1): Dropout(p=0.25)\n  (dropout2): Dropout(p=0.5)\n  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)\n  (fc2): Linear(in\_features=128, out\_features=10, bias=True)\n), cpu, *dataset1(), Adadelta (\nParameter Group 0\n    eps: 1e-06\n    lr: 0.03\n    rho: 0.9\n    weight\_decay: 0\n), 4)'] \\ \hline JUMP\_ABSOLUTE 128 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline FOR\_ITER 149 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline \end{tabular} \end{center} \end{table} \\\begin{table} \begin{center} \caption{Results of Stack(main)} \label{tab:Results of Stack} \begin{tabular}{m{4cm}| m{12cm} |} \hline STORE\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 5] \\ \hline LOAD\_GLOBAL 15 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline LOAD\_FAST 8 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>] \\ \hline LOAD\_FAST 2 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+)] \\ \hline LOAD\_FAST 6 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu')] \\ \hline LOAD\_FAST 9 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()'] \\ \hline LOAD\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+)] \\ \hline CALL\_FUNCTION 5 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+), 5] \\ \hline POP\_TOP None & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 'train(Net(\n  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))\n  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))\n  (dropout1): Dropout(p=0.25)\n  (dropout2): Dropout(p=0.5)\n  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)\n  (fc2): Linear(in\_features=128, out\_features=10, bias=True)\n), cpu, *dataset1(), Adadelta (\nParameter Group 0\n    eps: 1e-06\n    lr: 0.03\n    rho: 0.9\n    weight\_decay: 0\n), 5)'] \\ \hline JUMP\_ABSOLUTE 128 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline FOR\_ITER 149 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline STORE\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 6] \\ \hline LOAD\_GLOBAL 15 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline LOAD\_FAST 8 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>] \\ \hline LOAD\_FAST 2 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+)] \\ \hline LOAD\_FAST 6 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu')] \\ \hline \end{tabular} \end{center} \end{table} \\\begin{table} \begin{center} \caption{Results of Stack(main)} \label{tab:Results of Stack} \begin{tabular}{m{4cm}| m{12cm} |} \hline LOAD\_FAST 9 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()'] \\ \hline LOAD\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+)] \\ \hline CALL\_FUNCTION 5 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+), 6] \\ \hline POP\_TOP None & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 'train(Net(\n  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))\n  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))\n  (dropout1): Dropout(p=0.25)\n  (dropout2): Dropout(p=0.5)\n  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)\n  (fc2): Linear(in\_features=128, out\_features=10, bias=True)\n), cpu, *dataset1(), Adadelta (\nParameter Group 0\n    eps: 1e-06\n    lr: 0.03\n    rho: 0.9\n    weight\_decay: 0\n), 6)'] \\ \hline JUMP\_ABSOLUTE 128 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline FOR\_ITER 149 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline STORE\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 7] \\ \hline LOAD\_GLOBAL 15 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline LOAD\_FAST 8 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>] \\ \hline LOAD\_FAST 2 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+)] \\ \hline LOAD\_FAST 6 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu')] \\ \hline LOAD\_FAST 9 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()'] \\ \hline LOAD\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+)] \\ \hline CALL\_FUNCTION 5 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+), 7] \\ \hline POP\_TOP None & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 'train(Net(\n  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))\n  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))\n  (dropout1): Dropout(p=0.25)\n  (dropout2): Dropout(p=0.5)\n  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)\n  (fc2): Linear(in\_features=128, out\_features=10, bias=True)\n), cpu, *dataset1(), Adadelta (\nParameter Group 0\n    eps: 1e-06\n    lr: 0.03\n    rho: 0.9\n    weight\_decay: 0\n), 7)'] \\ \hline JUMP\_ABSOLUTE 128 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline \end{tabular} \end{center} \end{table} \\\begin{table} \begin{center} \caption{Results of Stack(main)} \label{tab:Results of Stack} \begin{tabular}{m{4cm}| m{12cm} |} \hline FOR\_ITER 149 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline STORE\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 8] \\ \hline LOAD\_GLOBAL 15 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline LOAD\_FAST 8 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>] \\ \hline LOAD\_FAST 2 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+)] \\ \hline LOAD\_FAST 6 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu')] \\ \hline LOAD\_FAST 9 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()'] \\ \hline LOAD\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+)] \\ \hline CALL\_FUNCTION 5 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+), 8] \\ \hline POP\_TOP None & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 'train(Net(\n  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))\n  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))\n  (dropout1): Dropout(p=0.25)\n  (dropout2): Dropout(p=0.5)\n  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)\n  (fc2): Linear(in\_features=128, out\_features=10, bias=True)\n), cpu, *dataset1(), Adadelta (\nParameter Group 0\n    eps: 1e-06\n    lr: 0.03\n    rho: 0.9\n    weight\_decay: 0\n), 8)'] \\ \hline JUMP\_ABSOLUTE 128 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline FOR\_ITER 149 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline STORE\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 9] \\ \hline LOAD\_GLOBAL 15 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline LOAD\_FAST 8 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>] \\ \hline LOAD\_FAST 2 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+)] \\ \hline \end{tabular} \end{center} \end{table} \\\begin{table} \begin{center} \caption{Results of Stack(main)} \label{tab:Results of Stack} \begin{tabular}{m{4cm}| m{12cm} |} \hline LOAD\_FAST 6 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu')] \\ \hline LOAD\_FAST 9 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()'] \\ \hline LOAD\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+)] \\ \hline CALL\_FUNCTION 5 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+), 9] \\ \hline POP\_TOP None & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 'train(Net(\n  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))\n  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))\n  (dropout1): Dropout(p=0.25)\n  (dropout2): Dropout(p=0.5)\n  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)\n  (fc2): Linear(in\_features=128, out\_features=10, bias=True)\n), cpu, *dataset1(), Adadelta (\nParameter Group 0\n    eps: 1e-06\n    lr: 0.03\n    rho: 0.9\n    weight\_decay: 0\n), 9)'] \\ \hline JUMP\_ABSOLUTE 128 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline FOR\_ITER 149 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline STORE\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 10] \\ \hline LOAD\_GLOBAL 15 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline LOAD\_FAST 8 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>] \\ \hline LOAD\_FAST 2 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+)] \\ \hline LOAD\_FAST 6 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu')] \\ \hline LOAD\_FAST 9 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()'] \\ \hline LOAD\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+)] \\ \hline CALL\_FUNCTION 5 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+), 10] \\ \hline POP\_TOP None & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 'train(Net(\n  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))\n  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))\n  (dropout1): Dropout(p=0.25)\n  (dropout2): Dropout(p=0.5)\n  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)\n  (fc2): Linear(in\_features=128, out\_features=10, bias=True)\n), cpu, *dataset1(), Adadelta (\nParameter Group 0\n    eps: 1e-06\n    lr: 0.03\n    rho: 0.9\n    weight\_decay: 0\n), 10)'] \\ \hline \end{tabular} \end{center} \end{table} \\\begin{table} \begin{center} \caption{Results of Stack(main)} \label{tab:Results of Stack} \begin{tabular}{m{4cm}| m{12cm} |} \hline JUMP\_ABSOLUTE 128 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline FOR\_ITER 149 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline STORE\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 11] \\ \hline LOAD\_GLOBAL 15 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline LOAD\_FAST 8 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>] \\ \hline LOAD\_FAST 2 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+)] \\ \hline LOAD\_FAST 6 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu')] \\ \hline LOAD\_FAST 9 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()'] \\ \hline LOAD\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+)] \\ \hline CALL\_FUNCTION 5 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+), 11] \\ \hline POP\_TOP None & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 'train(Net(\n  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))\n  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))\n  (dropout1): Dropout(p=0.25)\n  (dropout2): Dropout(p=0.5)\n  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)\n  (fc2): Linear(in\_features=128, out\_features=10, bias=True)\n), cpu, *dataset1(), Adadelta (\nParameter Group 0\n    eps: 1e-06\n    lr: 0.03\n    rho: 0.9\n    weight\_decay: 0\n), 11)'] \\ \hline JUMP\_ABSOLUTE 128 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline FOR\_ITER 149 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline STORE\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 12] \\ \hline LOAD\_GLOBAL 15 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline LOAD\_FAST 8 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>] \\ \hline \end{tabular} \end{center} \end{table} \\\begin{table} \begin{center} \caption{Results of Stack(main)} \label{tab:Results of Stack} \begin{tabular}{m{4cm}| m{12cm} |} \hline LOAD\_FAST 2 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+)] \\ \hline LOAD\_FAST 6 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu')] \\ \hline LOAD\_FAST 9 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()'] \\ \hline LOAD\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+)] \\ \hline CALL\_FUNCTION 5 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+), 12] \\ \hline POP\_TOP None & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 'train(Net(\n  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))\n  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))\n  (dropout1): Dropout(p=0.25)\n  (dropout2): Dropout(p=0.5)\n  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)\n  (fc2): Linear(in\_features=128, out\_features=10, bias=True)\n), cpu, *dataset1(), Adadelta (\nParameter Group 0\n    eps: 1e-06\n    lr: 0.03\n    rho: 0.9\n    weight\_decay: 0\n), 12)'] \\ \hline JUMP\_ABSOLUTE 128 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline FOR\_ITER 149 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline STORE\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 13] \\ \hline LOAD\_GLOBAL 15 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline LOAD\_FAST 8 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>] \\ \hline LOAD\_FAST 2 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+)] \\ \hline LOAD\_FAST 6 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu')] \\ \hline LOAD\_FAST 9 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()'] \\ \hline LOAD\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+)] \\ \hline CALL\_FUNCTION 5 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+), 13] \\ \hline \end{tabular} \end{center} \end{table} \\\begin{table} \begin{center} \caption{Results of Stack(main)} \label{tab:Results of Stack} \begin{tabular}{m{4cm}| m{12cm} |} \hline POP\_TOP None & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 'train(Net(\n  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))\n  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))\n  (dropout1): Dropout(p=0.25)\n  (dropout2): Dropout(p=0.5)\n  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)\n  (fc2): Linear(in\_features=128, out\_features=10, bias=True)\n), cpu, *dataset1(), Adadelta (\nParameter Group 0\n    eps: 1e-06\n    lr: 0.03\n    rho: 0.9\n    weight\_decay: 0\n), 13)'] \\ \hline JUMP\_ABSOLUTE 128 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline FOR\_ITER 149 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline STORE\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 14] \\ \hline LOAD\_GLOBAL 15 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline LOAD\_FAST 8 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>] \\ \hline LOAD\_FAST 2 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+)] \\ \hline LOAD\_FAST 6 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu')] \\ \hline LOAD\_FAST 9 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()'] \\ \hline LOAD\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+)] \\ \hline CALL\_FUNCTION 5 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+), 14] \\ \hline POP\_TOP None & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 'train(Net(\n  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))\n  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))\n  (dropout1): Dropout(p=0.25)\n  (dropout2): Dropout(p=0.5)\n  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)\n  (fc2): Linear(in\_features=128, out\_features=10, bias=True)\n), cpu, *dataset1(), Adadelta (\nParameter Group 0\n    eps: 1e-06\n    lr: 0.03\n    rho: 0.9\n    weight\_decay: 0\n), 14)'] \\ \hline JUMP\_ABSOLUTE 128 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline FOR\_ITER 149 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline STORE\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 15] \\ \hline LOAD\_GLOBAL 15 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline \end{tabular} \end{center} \end{table} \\\begin{table} \begin{center} \caption{Results of Stack(main)} \label{tab:Results of Stack} \begin{tabular}{m{4cm}| m{12cm} |} \hline LOAD\_FAST 8 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>] \\ \hline LOAD\_FAST 2 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+)] \\ \hline LOAD\_FAST 6 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu')] \\ \hline LOAD\_FAST 9 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()'] \\ \hline LOAD\_FAST 10 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+)] \\ \hline CALL\_FUNCTION 5 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, <function train at 0x10ef37730>, Net(
+  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))
+  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))
+  (dropout1): Dropout(p=0.25)
+  (dropout2): Dropout(p=0.5)
+  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)
+  (fc2): Linear(in\_features=128, out\_features=10, bias=True)
+), device(type='cpu'), '*dataset1()', Adadelta (
+Parameter Group 0
+    eps: 1e-06
+    lr: 0.03
+    rho: 0.9
+    weight\_decay: 0
+), 15] \\ \hline POP\_TOP None & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>, 'train(Net(\n  (conv1): Conv2d(1, 32, kernel\_size=(3, 3), stride=(1, 1))\n  (conv2): Conv2d(32, 64, kernel\_size=(3, 3), stride=(1, 1))\n  (dropout1): Dropout(p=0.25)\n  (dropout2): Dropout(p=0.5)\n  (fc1): Linear(in\_features=9216, out\_features=128, bias=True)\n  (fc2): Linear(in\_features=128, out\_features=10, bias=True)\n), cpu, *dataset1(), Adadelta (\nParameter Group 0\n    eps: 1e-06\n    lr: 0.03\n    rho: 0.9\n    weight\_decay: 0\n), 15)'] \\ \hline JUMP\_ABSOLUTE 128 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline FOR\_ITER 149 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, 151, <range\_iterator object at 0x10eef7660>] \\ \hline LOAD\_CONST 0 & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>] \\ \hline RETURN\_VALUE None & ['batch\_size', 32, 'batch\_size', 32, <class 'torch.utils.data.dataloader.DataLoader'>, <class 'torch.utils.data.dataloader.DataLoader'>, None] \\ \hline \end{tabular} \end{center} \end{table}

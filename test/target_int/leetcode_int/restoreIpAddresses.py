@@ -32,4 +32,3 @@ def restoreIpAddresses(s):
                         res.append(add1 + '.' + add2 + '.' + add3 + '.' + add4)
     return res
 
-print(restoreIpAddresses("25511135"))    # pragma: no cover

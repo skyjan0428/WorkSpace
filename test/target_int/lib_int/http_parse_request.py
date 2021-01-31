@@ -25,5 +25,3 @@ def http_parse_request(version):
     if version_number_1 >= 2 and version_number_2 >= 0:
         return False
     return True
-
-print(http_parse_request('HTTP/1.1'))

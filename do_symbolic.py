@@ -9,10 +9,11 @@ import collections
 import json
 from generate_cfg import generate_cfg
 from symbolic_execution import SymbolicExecution
+from symbolic_execution2 import SymbolicExecution as ss
 from ProgramStatus import ProgramStatus
 from PathConstraints import PathConstraints
 
-def do_symbolic(srcipt_path, bytecode_path, target_const):
+def do_symbolic(srcipt_path, bytecode_path, target_const, file):
 
     generate_bytecode(srcipt_path, bytecode_path)
     # dissemble bytecode & initialize ProgramStatus
@@ -20,8 +21,19 @@ def do_symbolic(srcipt_path, bytecode_path, target_const):
 
     nodes, edges = cfg_generator(bytecode_path, 'const_%d' % target_const, const=target_const)
 
-    se = SymbolicExecution((nodes, edges), init_ps)
+    if file == 0:
+        # from symbolic_execution import write_file_stack
+        # if len(write_file_stack) != 0:
+        #     write_file_stack.pop()[0].close()
+
+        se = SymbolicExecution((nodes, edges), init_ps)
+    else:
+        # from symbolic_execution2 import write_file_stack
+        # if len(write_file_stack) != 0:
+        #     write_file_stack.pop()[0].close()
+        se = ss((nodes, edges), init_ps)
     se.run()
+
 
     print('[INFO]: ============= RESULTS =============')
     res = se.get_results()
@@ -72,7 +84,9 @@ def disassemble(input_path, const=None):
         # print('ps', ps.get_copy_global_val())
         # no function input
         print('[INFO]: Conducting Symbolic Execution on Parent Code Object of The Target')
+        
         se.run()
+        
         
         res = se.get_results()
         # fetch local variable of the parent code object as the global variable of the target code object

@@ -1,14 +1,17 @@
 from xmlrpc.server import DocXMLRPCServer
 
-
 # register_instance的做法
 
 class doc_generate:
 	def __init__(self, serv):
 		self.serv = serv
-	
+		# import traceback
+		# traceback.print_stack()
+		# exit()
 	def welcome_html(self, title):
-
+		# import traceback
+		# traceback.print_stack()
+		# exit()
 		generated = '<html><head><title>' + title + '</title></head><body>Welcome</body></html>'
 		return generated
 	def generate_html(self, title):
@@ -18,14 +21,12 @@ class doc_generate:
 		return generated
 
 def main():
-	# import builtins
-	# from types import FunctionType
-	# func = FunctionType(doc_generate, {}, argdefs= ())
-	# a = builtins.__build_class__(fnc, 'doc_generate')
-	# print(type(doc_generate))
-	serv = DocXMLRPCServer(("localhost", 8002), logRequests=False)
-	serv.register_instance(doc_generate(serv))
-	serv.serve_forever()
+    serv = DocXMLRPCServer(("localhost", 8002), logRequests=False)
+    # print(serv.RequestHandlerClass)
+    # exit()
+    serv.register_instance(doc_generate(serv))
+    # generate_html_func() 
+    serv.serve_forever()
 
 # main()
 

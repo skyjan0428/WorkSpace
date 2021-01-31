@@ -18,7 +18,7 @@ from do_symbolic import do_symbolic
 
 
 if __name__ == '__main__':
-    target_const = 4
+    target_const = 11
 
     debug_mode = True
 
@@ -26,20 +26,18 @@ if __name__ == '__main__':
 
     # file_name = 'calvin/runtime/north/calvincontrol'
     # file_name = 'test_class'
-    file_name = 'DocServer'
+    file_name = 'pytorch'
     # pah of the target code
 
     # path = './test/'
     path = './test2/'
-
-
     sys.path.append(sys.path[0]+ path[1:-1])
 
 
     srcipt_path = os.path.join(path, file_name+'.py')
     bytecode_path = os.path.join(path, file_name+'.pyc')
 
-    res = do_symbolic(srcipt_path, bytecode_path, target_const)
+    res = do_symbolic(srcipt_path, bytecode_path, target_const, 0)
     count = 0
     if not debug_mode:
         os.mkdir('./' + file_name);
@@ -60,6 +58,13 @@ if __name__ == '__main__':
         od = collections.OrderedDict(sorted(d.items()))
         print('Instruction set %d: %s' % (count, json.dumps(od)))
         print('==========')
+    from symbolic_execution import write_file_stack
+
+    for write_file in write_file_stack:
+        ff = write_file[0]
+        ff.write("\\end{tabular} \\end{center} \\end{table}")
+        ff.close()
+
 
     print('[INFO]: ============= END OF THE RESULTS =============')
 
